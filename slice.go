@@ -1,15 +1,15 @@
 package goo
 
 func MapSlice[E any, V any](s []E, f func(E) V) []V {
-	var v []V
-	for _, e := range s {
-		v = append(v, f(e))
+	v := make([]V, len(s))
+	for i, e := range s {
+		v[i] = f(e)
 	}
 	return v
 }
 
 func ReduceSlice[E any, V any](s []E, initial V, f func(V, E) V) V {
-	var v V
+	v := initial
 	for _, e := range s {
 		v = f(v, e)
 	}
