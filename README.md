@@ -1,9 +1,9 @@
 # goo
 goo - Go goodies 
 
-A joke package that include things that should be in the STD since generics.
+A joke package that includes things that should be in the STD since generics.
 
-Most of them are written by Copilot.`
+Most of them are written by Copilot.
 
 - `func Must[T any](v T, err error) T`
 
